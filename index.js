@@ -48,7 +48,7 @@ let photos = fs.readdirSync(photosDir)
 
 const workbook = new ExcelJS.Workbook();
 const sheet = workbook.addWorksheet('My Sheet');
-sheet.addRow(['Артикул', 'Mediafiles']);
+sheet.addRow(['Артикул товара', 'Медиафайлы', '! Ссылки на фото/видео для одного артикула необходимо указать в одной строке и через разделитель ;']);
 
 Promise.all(Object.entries(photos).map(([article, articlePhotos]) =>
     Promise.all(articlePhotos.map(articlePhoto =>
