@@ -1,0 +1,26 @@
+{
+  "bin": "./index.js",
+  "name": "wb-upload-photos",
+  "version": "1.0.0",
+  "description": "Simple script to prepare excel for uploading photos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alexey chentsov",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1271.0",
+    "exceljs": "^4.3.0",
+    "pkg": "^5.8.0",
+    "uuid": "^9.0.0"
+  },
+  "pkg": {
+    "assets": [
+      "config.json"
+    ],
+    "targets": [
+      "node16-win-x64", "macos"
+    ]
+  }
+}
