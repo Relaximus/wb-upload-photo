@@ -36,7 +36,7 @@ let photos = fs.readdirSync(photosDir)
 .filter(file => PHOTO_EXTS.some(ext => file.endsWith(ext)))
 .sort()
 .reduce((res, photo) => {
-  const key = photo.split("_").slice(0, -1).join("_");
+  const key = photo.split("_").slice(0, -1).join("/");
   if (key in res) {
     res[key].push(photo);
   } else {
